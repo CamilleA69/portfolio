@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Camille 0. Ariola - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    
+    <header style="background-color:#C9E4CA; padding: 20px; text-align:center;">
+        <h1>Welcome to My Portfolio</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Products</a>
+            <a href="#">Contact Us</a>
+        </nav>
+        <hr>
+    </header>
+    <div class="container" style="background-color: #B2FFFC; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+        <h1>Camille 0. Ariola</h1>
+    </div>
+    
+    <section id="about" style="background-color: #B2FFFC; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+        <div class="container">
+            <h2>About Me</h2>
+            <p><i>Hi! I'm Camille, a passionate IT professional. I believe that IT professionals play a critical role in shaping the future of technology and innovation. I am dedicated to helping organizations grow and innovate through the power of technology.</i></p>
+            <hr>
+        </div>
+    </section>
+    <!-- Personal Information Section -->
+    <section id="personal-info" style="background-color: #B2FFFC; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+        <div class="container">
+            <h1>Personal Information</h1>
+            <ul>
+                <li>Age: 19</li>
+                <li>Birthday: July 03, 2005</li>
+                <li>Birthplace: New Buncag Barangay</li>
+                <li>Address: Talaudyong Barangay Bac</li>
+                <li>Email: <a href="mailto:ariolacamille64@gmail.cc">ariolacamille64@gmail.cc</a></li>
+                <li>Contact number: 09756910042</li>
+            </ul>
+            <hr>
+        </div>
+    </section>
+    
+    <section id="skills" style="background-color: #B2FFFC; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+        <h1>Skills</h1>
+        <div class="chart-container">
+            <canvas id="skillsBarChart"></canvas>
+        </div>
+        <script>
+            const ctx = document.getElementById('skillsBarChart').getContext('2d');
+            const skillsBarChart = new Chart(ctx, {
+                type: 'bar', // Bar chart
+                data: {
+                    labels: ['HTML', 'CSS', 'JavaScript', 'Python', 'React', 'Node.js'],
+                    datasets: [{
+                        label: 'Skill Level',
+                        data: [85, 70, 80, 75, 60, 65], // Skill levels (in percentage)
+                        backgroundColor: '#007bff',
+                        borderColor: '#0056b3',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 100 // Scale up to 100% for skill level
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                        }
+                    }
+                }
+            });
+        </script>
+    </section>
+    <footer>
+        <a href="default.html">Back</a>
+    </footer>
+</body>
+</html>
+
+
+# CSS (in style.css file)
+body {
+    font-family: Arial, sans-serif;
+    background-color: #B2FFFC; /* Mint green background
